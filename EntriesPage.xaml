@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	x:Class="MauiHandlers.EntriesPage"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:imgEntry="clr-namespace:MauiHandlers.Controls.ImageEntry"
+	xmlns:noBorder="clr-namespace:MauiHandlers.Controls.BordelessEntry"
+	Title="EntriesPage">
+	<VerticalStackLayout Spacing="6">
+		<Entry Text="Normal Entry" />
+		<Entry noBorder:BorderlessEntry.HasBorder="False" Text="No border/Underline entry" />
+		<imgEntry:ImageEntry
+			Image="dotnet_bot.png"
+			ImageHeight="40"
+			ImageWidth="40"
+			Text="This is a entry with an icon" />
+	</VerticalStackLayout>
+</ContentPage>
