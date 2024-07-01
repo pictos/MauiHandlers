@@ -8,21 +8,23 @@
 
 	<ShellContent
 		Title="Home"
-		ContentTemplate="{DataTemplate local:ProgressPage}"
+		ContentTemplate="{DataTemplate local:MainPage}"
 		Route="MainPage" />
 
-	<FlyoutItem>
-		<ShellContent
-			Title="HorizontalProgressBar"
-			ContentTemplate="{DataTemplate local:ProgressPage}"
-			Route="HorizontalProgress" />
-	</FlyoutItem>
 
-	<FlyoutItem>
+	<FlyoutItem Title="Entries Page">
 		<ShellContent
 			Title="Entries Page"
 			ContentTemplate="{DataTemplate local:EntriesPage}"
 			Route="EntriesPage" />
+	</FlyoutItem>
+
+
+	<FlyoutItem Title="HorizontalProgressBar">
+		<ShellContent
+			Title="HorizontalProgressBar"
+			ContentTemplate="{DataTemplate local:ProgressPage}"
+			Route="HorizontalProgress" />
 	</FlyoutItem>
 
 </Shell>

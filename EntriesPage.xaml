@@ -13,6 +13,6 @@
 			Image="dotnet_bot.png"
 			ImageHeight="40"
 			ImageWidth="40"
-			Text="This is a entry with an icon" />
+			Text="This is a entry with an icon" />	
 	</VerticalStackLayout>
 </ContentPage>

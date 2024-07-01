@@ -1,4 +1,5 @@
 ﻿using MauiHandlers.Controls.BordelessEntry;
+using MauiHandlers.Controls.HorizontalProgressBar;
 using Microsoft.Extensions.Logging;
 using Microsoft.Maui.Handlers;
 
@@ -18,6 +19,7 @@ public static class MauiProgram
 			.ConfigureMauiHandlers(h =>
 			{
 				EntryHandler.Mapper.Add("HasBorder", BorderlessEntry.MapBorder);
+				h.AddHandler(typeof(HorizontalProgressBar), typeof(HorizontalProgressBarHandler));
 			});
 
 #if DEBUG
