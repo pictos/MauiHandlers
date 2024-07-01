@@ -4,15 +4,18 @@
 	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 	xmlns:progress="clr-namespace:MauiHandlers.Controls.HorizontalProgressBar"
-	Title="ProgressPage">
-	<VerticalStackLayout>
+	Title="ProgressPage"
+	Padding="5">
+	<VerticalStackLayout Spacing="6">
 		<Label
 			x:Name="lbl"
 			HorizontalOptions="Center"
+			Text="0.0"
 			VerticalOptions="Center" />
 
 		<progress:HorizontalProgressBar
 			x:Name="horizontalProgress"
+			MinimumHeightRequest="30"
 			ProgressColor="Fuchsia"
 			TrackColor="Black" />
 

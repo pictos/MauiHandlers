@@ -4,7 +4,6 @@ using Android.Content.Res;
 using Android.Content;
 using Android.Graphics.Drawables;
 using Microsoft.Maui.Platform;
-using AView = Android.Views.View;
 
 namespace MauiHandlers.Controls.HorizontalProgressBar;
 partial class HorizontalProgressBarHandler : ViewHandler<HorizontalProgressBar, AProgressBar>
@@ -13,22 +12,21 @@ partial class HorizontalProgressBarHandler : ViewHandler<HorizontalProgressBar, 
 
 	protected override AProgressBar CreatePlatformView()
 	{
-		return new AProgressBar(Context);
-	}
-
-	protected override void ConnectHandler(AProgressBar platformView)
-	{
+		return new AProgressBar(Context, null, Android.Resource.Attribute.ProgressBarStyleHorizontal);
 	}
 
 	static void MapTrackColor(HorizontalProgressBarHandler handler, HorizontalProgressBar view)
 	{
+		handler.PlatformView.UpdateBackground(view.TrackColor);
 	}
 
 	static void MapProgress(HorizontalProgressBarHandler handler, HorizontalProgressBar view)
 	{
+		handler.PlatformView.UpdateProgressValue(view.Progress);
 	}
 	static void MapProgressColor(HorizontalProgressBarHandler handler, HorizontalProgressBar view)
 	{
+		handler.PlatformView.UpdateProgressDrawable(view.ProgressColor);
 	}
 }
 
