@@ -15,5 +15,13 @@ static partial class BorderlessEntry
 
 	public static void MapBorder(IEntryHandler handler, IEntry entry)
 	{
+		var e = (Entry)entry;
+		if (!e.IsSet(HasBorderProperty))
+			return;
+#if IOS
+		handler.PlatformView.BorderStyle = UIKit.UITextBorderStyle.None;
+#elif ANDROID
+		handler.PlatformView.Background = null;
+#endif
 	}
 }
