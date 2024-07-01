@@ -5,7 +5,8 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 	xmlns:imgEntry="clr-namespace:MauiHandlers.Controls.ImageEntry"
 	xmlns:noBorder="clr-namespace:MauiHandlers.Controls.BordelessEntry"
-	Title="EntriesPage">
+	Title="EntriesPage"
+	Padding="10">
 	<VerticalStackLayout Spacing="6">
 		<Entry Text="Normal Entry" />
 		<Entry noBorder:BorderlessEntry.HasBorder="False" Text="No border/Underline entry" />
@@ -13,6 +14,6 @@
 			Image="dotnet_bot.png"
 			ImageHeight="40"
 			ImageWidth="40"
-			Text="This is a entry with an icon" />	
+			Text="This is a entry with an icon" />
 	</VerticalStackLayout>
 </ContentPage>
