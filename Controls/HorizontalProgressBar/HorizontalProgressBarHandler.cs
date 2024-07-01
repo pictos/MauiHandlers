@@ -5,7 +5,7 @@ namespace MauiHandlers.Controls.HorizontalProgressBar;
 sealed partial class HorizontalProgressBarHandler
 {
 	public static PropertyMapper<HorizontalProgressBar, HorizontalProgressBarHandler> HorizontalProgressBarMapper =
-			new(ViewHandler.ViewMapper)
+			new(ViewMapper)
 			{
 				[nameof(HorizontalProgressBar.TrackColor)] = MapTrackColor,
 				[nameof(HorizontalProgressBar.Progress)] = MapProgress,

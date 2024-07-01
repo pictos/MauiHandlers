@@ -44,10 +44,9 @@ static class HorizontalProgressBarExtensions
 
 		static Drawable? GetHorizontalTrack(Android.Graphics.Color color, Context context)
 		{
-			return default;
-			//var drawable = context.GetDrawable(Resource.Drawable.horizontal_track_bar) as GradientDrawable;
-			//drawable?.SetColor(ColorStateList.ValueOf(color));
-			//return drawable;
+			var drawable = context.GetDrawable(Resource.Drawable.horizontal_track_bar) as GradientDrawable;
+			drawable?.SetColor(ColorStateList.ValueOf(color));
+			return drawable;
 		}
 	}
 
@@ -72,13 +71,12 @@ static class HorizontalProgressBarExtensions
 
 		static Drawable? GetHorizontalProgress(Android.Graphics.Color color, Context context)
 		{
-			return default;
-			//var scale = context.GetDrawable(Resource.Drawable.horizontal_progress_bar) as ScaleDrawable;
+			var scale = context.GetDrawable(Resource.Drawable.horizontal_progress_bar) as ScaleDrawable;
 
-			//var drawable = scale.Drawable as GradientDrawable;
-			//drawable?.SetColor(ColorStateList.ValueOf(color));
+			var drawable = scale!.Drawable as GradientDrawable;
+			drawable?.SetColor(ColorStateList.ValueOf(color));
 
-			//return scale;
+			return scale;
 		}
 	}
 }
