@@ -1,6 +1,7 @@
 ﻿using CoreAnimation;
 using CoreGraphics;
 using Microsoft.Maui.Handlers;
+using Microsoft.Maui.Platform;
 using UIKit;
 
 namespace MauiHandlers.Controls.HorizontalProgressBar;
@@ -9,7 +10,8 @@ partial class HorizontalProgressBarHandler : ViewHandler<HorizontalProgressBar, 
 {
 	protected override HorizontalProgressBariOS CreatePlatformView()
 	{
-		throw new NotImplementedException();
+		var virtualView = VirtualView;
+		return new HorizontalProgressBariOS(virtualView.Width, virtualView.Height, virtualView.TrackColor.ToCGColor(), virtualView.ProgressColor.ToCGColor(), virtualView.Progress);
 	}
 
 	static void MapTrackColor(HorizontalProgressBarHandler handler, HorizontalProgressBar view)

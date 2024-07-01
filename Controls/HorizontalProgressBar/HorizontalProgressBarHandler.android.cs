@@ -4,6 +4,7 @@ using Android.Content.Res;
 using Android.Content;
 using Android.Graphics.Drawables;
 using Microsoft.Maui.Platform;
+using AView = Android.Views.View;
 
 namespace MauiHandlers.Controls.HorizontalProgressBar;
 partial class HorizontalProgressBarHandler : ViewHandler<HorizontalProgressBar, AProgressBar>
@@ -12,7 +13,7 @@ partial class HorizontalProgressBarHandler : ViewHandler<HorizontalProgressBar, 
 
 	protected override AProgressBar CreatePlatformView()
 	{
-		throw new NotImplementedException();
+		return new AProgressBar(Context);
 	}
 
 	protected override void ConnectHandler(AProgressBar platformView)
