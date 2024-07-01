@@ -1,4 +1,6 @@
-﻿namespace MauiHandlers;
+﻿using MauiHandlers.Controls.BordelessEntry;
+
+namespace MauiHandlers;
 
 public partial class MainPage : ContentPage
 {

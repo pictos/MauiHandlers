@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
-    x:Class="MauiHandlers.AppShell"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MauiHandlers"
-    Shell.FlyoutBehavior="Disabled"
-    Title="MauiHandlers">
+	x:Class="MauiHandlers.AppShell"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:local="clr-namespace:MauiHandlers"
+	Title="MauiHandlers">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+	<ShellContent
+		Title="Home"
+		ContentTemplate="{DataTemplate local:ProgressPage}"
+		Route="MainPage" />
+
+	<FlyoutItem>
+		<ShellContent
+			Title="HorizontalProgressBar"
+			ContentTemplate="{DataTemplate local:ProgressPage}"
+			Route="HorizontalProgress" />
+	</FlyoutItem>
+
+	<FlyoutItem>
+		<ShellContent
+			Title="Entries Page"
+			ContentTemplate="{DataTemplate local:EntriesPage}"
+			Route="EntriesPage" />
+	</FlyoutItem>
 
 </Shell>
