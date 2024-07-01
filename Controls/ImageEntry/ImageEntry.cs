@@ -37,6 +37,8 @@ sealed partial class ImageEntry : Entry
 		get { return (ImageAlignment)GetValue(ImageAlignmentProperty); }
 		set { SetValue(ImageAlignmentProperty, value); }
 	}
+
+	public static partial void RegisterPlatformView();
 }
 
 public enum ImageAlignment

@@ -6,4 +6,11 @@ public partial class EntriesPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+	void Button_Clicked(object sender, EventArgs e)
+	{
+		imgEntry.ImageAlignment = imgEntry.ImageAlignment == Controls.ImageEntry.ImageAlignment.Left
+			? Controls.ImageEntry.ImageAlignment.Right
+			: Controls.ImageEntry.ImageAlignment.Left;
+	}
 }

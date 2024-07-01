@@ -5,14 +5,18 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 	xmlns:imgEntry="clr-namespace:MauiHandlers.Controls.ImageEntry"
 	xmlns:noBorder="clr-namespace:MauiHandlers.Controls.BordelessEntry"
-	Title="EntriesPage">
+	Title="EntriesPage"
+	Padding="10">
 	<VerticalStackLayout Spacing="6">
 		<Entry Text="Normal Entry" />
 		<Entry noBorder:BorderlessEntry.HasBorder="False" Text="No border/Underline entry" />
 		<imgEntry:ImageEntry
-			Image="dotnet_bot.png"
-			ImageHeight="40"
-			ImageWidth="40"
-			Text="This is a entry with an icon" />	
+			x:Name="imgEntry"
+			Image="dotnet_bot"
+			ImageHeight="60"
+			ImageWidth="60"
+			Text="This is a entry with an icon" />
+
+		<Button Clicked="Button_Clicked" Text="Change icon position" />
 	</VerticalStackLayout>
 </ContentPage>
